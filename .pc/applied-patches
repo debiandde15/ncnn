@@ -1,0 +1,3 @@
+deepin-fix-vulkan-module-cannot-use-earlier-cmake-to-build.patch
+uniontech_avoid_loongarch_connot_compile.patch
+uniontech_avoid_mips64el_compiler_simd_bugs.patch

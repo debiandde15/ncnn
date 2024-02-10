@@ -1,0 +1,468 @@
+diff -Nur 1/src/layer/mips/absval_mips.cpp 2/src/layer/mips/absval_mips.cpp
+--- 1/src/layer/mips/absval_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/absval_mips.cpp	2022-12-08 16:01:37.678287219 +0800
+@@ -17,6 +17,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ namespace ncnn {
+diff -Nur 1/src/layer/mips/batchnorm_mips.cpp 2/src/layer/mips/batchnorm_mips.cpp
+--- 1/src/layer/mips/batchnorm_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/batchnorm_mips.cpp	2022-12-08 16:01:54.426566593 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/bias_mips.cpp 2/src/layer/mips/bias_mips.cpp
+--- 1/src/layer/mips/bias_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/bias_mips.cpp	2022-12-08 16:01:57.698620352 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/binaryop_mips.cpp 2/src/layer/mips/binaryop_mips.cpp
+--- 1/src/layer/mips/binaryop_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/binaryop_mips.cpp	2022-12-08 16:02:10.466827618 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/cast_mips.cpp 2/src/layer/mips/cast_mips.cpp
+--- 1/src/layer/mips/cast_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/cast_mips.cpp	2022-12-08 16:02:19.578973128 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ namespace ncnn {
+diff -Nur 1/src/layer/mips/clip_mips.cpp 2/src/layer/mips/clip_mips.cpp
+--- 1/src/layer/mips/clip_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/clip_mips.cpp	2022-12-08 16:02:23.231030894 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/convolution1d_mips.cpp 2/src/layer/mips/convolution1d_mips.cpp
+--- 1/src/layer/mips/convolution1d_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/convolution1d_mips.cpp	2022-12-08 16:02:37.939260391 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/convolutiondepthwise_mips.cpp 2/src/layer/mips/convolutiondepthwise_mips.cpp
+--- 1/src/layer/mips/convolutiondepthwise_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/convolutiondepthwise_mips.cpp	2022-12-08 16:02:45.511376604 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/convolution_mips.cpp 2/src/layer/mips/convolution_mips.cpp
+--- 1/src/layer/mips/convolution_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/convolution_mips.cpp	2022-12-08 16:02:34.155201824 +0800
+@@ -20,6 +20,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/crop_mips.cpp 2/src/layer/mips/crop_mips.cpp
+--- 1/src/layer/mips/crop_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/crop_mips.cpp	2022-12-08 16:02:48.659424539 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ namespace ncnn {
+diff -Nur 1/src/layer/mips/deconvolutiondepthwise_mips.cpp 2/src/layer/mips/deconvolutiondepthwise_mips.cpp
+--- 1/src/layer/mips/deconvolutiondepthwise_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/deconvolutiondepthwise_mips.cpp	2022-12-08 16:02:55.547528651 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/deconvolution_mips.cpp 2/src/layer/mips/deconvolution_mips.cpp
+--- 1/src/layer/mips/deconvolution_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/deconvolution_mips.cpp	2022-12-08 16:02:52.367480716 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/dequantize_mips.cpp 2/src/layer/mips/dequantize_mips.cpp
+--- 1/src/layer/mips/dequantize_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/dequantize_mips.cpp	2022-12-08 16:02:58.947579657 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/dropout_mips.cpp 2/src/layer/mips/dropout_mips.cpp
+--- 1/src/layer/mips/dropout_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/dropout_mips.cpp	2022-12-08 16:03:02.723636004 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/eltwise_mips.cpp 2/src/layer/mips/eltwise_mips.cpp
+--- 1/src/layer/mips/eltwise_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/eltwise_mips.cpp	2022-12-08 16:03:07.715710027 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/fix_msa.h 2/src/layer/mips/fix_msa.h
+--- 1/src/layer/mips/fix_msa.h	1970-01-01 08:00:00.000000000 +0800
++++ 2/src/layer/mips/fix_msa.h	2022-12-13 13:44:34.000000000 +0800
+@@ -0,0 +1,68 @@
++#ifndef LAYER_FIX_MSA_H
++#define LAYER_FIX_MSA_H
++
++#if __GNUC__ <= 8 && __GNUC_MINOR__ < 5
++
++#ifdef __msa_fmadd_w
++#undef __msa_fmadd_w
++#define __msa_fmadd_w(a, b, c) __builtin_msa_fmadd_w(c, b, a)
++#endif
++
++#ifdef __msa_fmadd_d
++#undef __msa_fmadd_d
++#define __msa_fmadd_d(a, b, c) __builtin_msa_fmadd_d(c, b, a)
++#endif
++
++#ifdef __msa_fmsub_w
++#undef __msa_fmsub_w
++#define __msa_fmsub_w(a, b, c) __builtin_msa_fmsub_w(c, b, a)
++#endif
++
++#ifdef __msa_fmsub_d
++#undef __msa_fmsub_d
++#define __msa_fmsub_d(a, b, c) __builtin_msa_fmsub_d(c, b, a)
++#endif
++
++#ifdef __msa_maddv_b
++#undef __msa_maddv_b
++#define __msa_maddv_b(a, b, c) __builtin_msa_maddv_b(c, b, a)
++#endif
++
++#ifdef __msa_maddv_h
++#undef __msa_maddv_h
++#define __msa_maddv_h(a, b, c) __builtin_msa_maddv_h(c, b, a)
++#endif
++
++#ifdef __msa_maddv_w
++#undef __msa_maddv_w
++#define __msa_maddv_w(a, b, c) __builtin_msa_maddv_w(c, b, a)
++#endif
++
++#ifdef __msa_maddv_d
++#undef __msa_maddv_d
++#define __msa_maddv_d(a, b, c) __builtin_msa_maddv_d(c, b, a)
++#endif
++
++#ifdef __msa_msubv_b
++#undef __msa_msubv_b
++#define __msa_msubv_b(a, b, c) __builtin_msa_msubv_b(c, b, a)
++#endif
++
++#ifdef __msa_msubv_h
++#undef __msa_msubv_h
++#define __msa_msubv_h(a, b, c) __builtin_msa_msubv_h(c, b, a)
++#endif
++
++#ifdef __msa_msubv_w
++#undef __msa_msubv_w
++#define __msa_msubv_w(a, b, c) __builtin_msa_msubv_w(c, b, a)
++#endif
++
++#ifdef __msa_msubv_d
++#undef __msa_msubv_d
++#define __msa_msubv_d(a, b, c) __builtin_msa_msubv_d(c, b, a)
++#endif
++
++#endif //GCC VERSION
++
++#endif //LAYER_FIX_MSA_H
+diff -Nur 1/src/layer/mips/flatten_mips.cpp 2/src/layer/mips/flatten_mips.cpp
+--- 1/src/layer/mips/flatten_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/flatten_mips.cpp	2022-12-08 16:03:23.891946205 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/hardsigmoid_mips.cpp 2/src/layer/mips/hardsigmoid_mips.cpp
+--- 1/src/layer/mips/hardsigmoid_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/hardsigmoid_mips.cpp	2022-12-08 16:03:27.676000664 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/hardswish_mips.cpp 2/src/layer/mips/hardswish_mips.cpp
+--- 1/src/layer/mips/hardswish_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/hardswish_mips.cpp	2022-12-08 16:03:31.424054311 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/innerproduct_mips.cpp 2/src/layer/mips/innerproduct_mips.cpp
+--- 1/src/layer/mips/innerproduct_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/innerproduct_mips.cpp	2022-12-08 16:03:35.628114141 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/interp_mips.cpp 2/src/layer/mips/interp_mips.cpp
+--- 1/src/layer/mips/interp_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/interp_mips.cpp	2022-12-08 16:03:39.432167965 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/mips_activation.h 2/src/layer/mips/mips_activation.h
+--- 1/src/layer/mips/mips_activation.h	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/mips_activation.h	2022-12-08 16:03:47.196276918 +0800
+@@ -19,6 +19,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ 
+ static inline v4f32 activation_ps(v4f32 _v, int activation_type, const ncnn::Mat& activation_params)
+diff -Nur 1/src/layer/mips/mips_usability.h 2/src/layer/mips/mips_usability.h
+--- 1/src/layer/mips/mips_usability.h	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/mips_usability.h	2022-12-08 16:03:50.888328306 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include <math.h>
+diff -Nur 1/src/layer/mips/mish_mips.cpp 2/src/layer/mips/mish_mips.cpp
+--- 1/src/layer/mips/mish_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/mish_mips.cpp	2022-12-08 16:03:54.452377656 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/msa_mathfun.h 2/src/layer/mips/msa_mathfun.h
+--- 1/src/layer/mips/msa_mathfun.h	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/msa_mathfun.h	2022-12-08 16:03:59.556447897 +0800
+@@ -31,6 +31,7 @@
+ #include "mips_usability.h"
+ 
+ #include <msa.h>
++#include "fix_msa.h"
+ 
+ _MIPS_FLOAT_CONST(c_1, 1.0f);
+ _MIPS_FLOAT_CONST(c_2, 2.0f);
+diff -Nur 1/src/layer/mips/packing_mips.cpp 2/src/layer/mips/packing_mips.cpp
+--- 1/src/layer/mips/packing_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/packing_mips.cpp	2022-12-08 16:04:03.468501389 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ namespace ncnn {
+diff -Nur 1/src/layer/mips/padding_mips.cpp 2/src/layer/mips/padding_mips.cpp
+--- 1/src/layer/mips/padding_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/padding_mips.cpp	2022-12-08 16:04:08.412568572 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/pooling_mips.cpp 2/src/layer/mips/pooling_mips.cpp
+--- 1/src/layer/mips/pooling_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/pooling_mips.cpp	2022-12-08 16:04:14.228647006 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/prelu_mips.cpp 2/src/layer/mips/prelu_mips.cpp
+--- 1/src/layer/mips/prelu_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/prelu_mips.cpp	2022-12-08 16:04:21.324741834 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/quantize_mips.cpp 2/src/layer/mips/quantize_mips.cpp
+--- 1/src/layer/mips/quantize_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/quantize_mips.cpp	2022-12-08 16:04:24.180779736 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/relu_mips.cpp 2/src/layer/mips/relu_mips.cpp
+--- 1/src/layer/mips/relu_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/relu_mips.cpp	2022-12-08 16:04:51.941140375 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_usability.h"
+diff -Nur 1/src/layer/mips/requantize_mips.cpp 2/src/layer/mips/requantize_mips.cpp
+--- 1/src/layer/mips/requantize_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/requantize_mips.cpp	2022-12-08 16:04:48.177092285 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #endif // __mips_msa
+ 
+ #include "mips_activation.h"
+diff -Nur 1/src/layer/mips/sigmoid_mips.cpp 2/src/layer/mips/sigmoid_mips.cpp
+--- 1/src/layer/mips/sigmoid_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/sigmoid_mips.cpp	2022-12-08 16:04:44.233041626 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/softmax_mips.cpp 2/src/layer/mips/softmax_mips.cpp
+--- 1/src/layer/mips/softmax_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/softmax_mips.cpp	2022-12-08 16:04:40.440992658 +0800
+@@ -19,6 +19,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/swish_mips.cpp 2/src/layer/mips/swish_mips.cpp
+--- 1/src/layer/mips/swish_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/swish_mips.cpp	2022-12-08 16:04:36.636943277 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/tanh_mips.cpp 2/src/layer/mips/tanh_mips.cpp
+--- 1/src/layer/mips/tanh_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/tanh_mips.cpp	2022-12-08 16:04:33.716905192 +0800
+@@ -16,6 +16,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
+diff -Nur 1/src/layer/mips/unaryop_mips.cpp 2/src/layer/mips/unaryop_mips.cpp
+--- 1/src/layer/mips/unaryop_mips.cpp	2022-11-28 04:38:26.000000000 +0800
++++ 2/src/layer/mips/unaryop_mips.cpp	2022-12-08 16:04:29.576850931 +0800
+@@ -18,6 +18,7 @@
+ 
+ #if __mips_msa
+ #include <msa.h>
++#include "fix_msa.h"
+ #include "msa_mathfun.h"
+ #endif // __mips_msa
+ 
